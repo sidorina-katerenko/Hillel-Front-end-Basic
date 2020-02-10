@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback form</title>
+</head>
+<body>
+    <main>
+        <form action="https://fom.in.ua/echo" method="POST">
+            <fieldset>
+                <legend>Your info</legend>
+                <label for="name">Your name</label>
+                <input type="text" name="UserName" id="name" placeholder="Valera Pobedun" required>
+                <label for="email">Your email</label>
+                <input type="email" name="UserEmail" id="email" placeholder="email@site.domain" required>
+            </fieldset>
+            <fieldset>
+                <legend>Your feedback</legend>
+                <label for="comment">Feedback</label>
+                <textarea name="Comment" id="comment" cols="50" rows="5" placeholder="Show me what you got" required></textarea>
+                <label for="fb">Your Facebook profile</label>
+                <input type="url" name="Facebook" id="fb">
+                <label for="ig">Your Instagram profile</label>
+                <input type="url" name="Instagram" id="ig">
+                <label for="li">Your LinkedIn profile</label>
+                <input type="url" name="LinkedIn" id="li">
+            </fieldset>
+            <fieldset>
+                <legend>Rate us</legend>
+                <input type="radio" name="Rate" id="rate1" value="1">
+                <label for="rate1">1</label>
+                <input type="radio" name="Rate" id="rate2" value="2">
+                <label for="rate2">2</label>
+                <input type="radio" name="Rate" id="rate3" value="3">
+                <label for="rate3">3</label>
+                <input type="radio" name="Rate" id="rate4" value="4">
+                <label for="rate4">4</label>
+                <input type="radio" name="Rate" id="rate5" value="5">
+                <label for="rate5">5</label>
+                <!--
+                Another option for rating:
+                <label for="ratescore">Your rating:</label>
+                <input type="number" min="1" max="5" name="Rate" id="ratescore">
+                -->
+                <label for="sourcename">How did you learn about us?</label>
+                <select name="Source" id="sourcename">
+                    <option value="fv">http://facevalera.com/</option>
+                    <option value="iv">http://instavalera.com/</option>
+                    <option value="vv">http://vvalere.com/</option>
+                    <option value="mv">http://myvalera.com/</option>
+                </select>
+                <input type="checkbox" name="SendACopy" id="sendacopy">
+                <label for="sendacopy">Send me a copy of my responce</label>
+                <button type="submit">Send</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
