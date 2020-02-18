@@ -1,0 +1,51 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.header {
+    font-size: 22px;
+}
+
+.navigation {
+    border: 5px solid #ff0000;
+}
+
+.navigation .link {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.navigation .active {
+    text-decoration: underline;
+}
+
+.section {
+    border: 2px dashed #ffc0cb;
+}
+
+.movie {
+    border: solid #008000;
+}
+
+.movie-title {
+    font-family: 'Coda Caption', sans-serif;
+    text-transform: uppercase;
+}
+
+.movie-rating {
+    color: #ffff00;
+}
+
+.total-rating {
+    color: #008000;
+}
+
+.movie-description {
+    font-weight: bold;
+}
+
+.hashtag {
+    color: #0000ff;
+}
