@@ -1,0 +1,90 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #ccc;
+    font-size: 16px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.header {
+    font-size: 22px;
+}
+
+.navigation {
+    border: 5px solid #ff0000;
+}
+
+.navigation .link {
+    text-decoration: none;
+    color: #ff0000;
+    margin: 10px;
+}
+
+.navigation .link:first-child {
+    margin-left: 0;
+}
+
+.navigation .link:last-child {
+    margin-right: 0;
+}
+
+/* Another option
+.navigation .link {
+    text-decoration: none;
+    color: #ff0000;
+    margin-right: 20px;
+}
+
+.navigation .link:last-child {
+    margin-right: 0;
+}
+*/
+
+.navigation .active {
+    text-decoration: underline;
+    border: 0;
+}
+
+.navigation .link:hover:not(.active) {
+    border: 2px solid #000000;
+}
+
+.section {
+    border: 2px dashed #ffc0cb;
+}
+
+.movie {
+    border: solid #008000;
+    margin-bottom: 30px;
+}
+
+.movie:last-child {
+    margin-bottom: 0;
+}
+
+.movie-title {
+    font-family: 'Coda Caption', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.movie-rating {
+    color: #ffff00;
+}
+
+.total-rating {
+    color: #008000;
+}
+
+.movie-image {
+    border-radius: 15px;
+}
+
+.movie-description {
+    font-weight: bold;
+}
+
+.hashtag {
+    color: #0000ff;
+}
