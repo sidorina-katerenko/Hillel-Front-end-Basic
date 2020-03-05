@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <form action="/" class="login-form">
+            <button type="button" class="close-button"></button>
+            <fieldset class="sign-in-form">
+                <legend class="login-heading">
+                    ЛИЧНЫЙ КАБИНЕТ
+                </legend>
+                <p class="login-description">
+                    ВВедите пожалуйста свой логин и пароль
+                </p>
+                <div class="input-container login">
+                    <input type="text" placeholder="ЛОГИН" class="login-interactive-element signin-input">
+                </div>
+                <div class="input-container password">
+                    <input type="password" placeholder="ПАРОЛЬ" class="login-interactive-element signin-input">
+                </div>
+                <div class="forgot-password-container">
+                    <a href="/" class="forgot-password-link">
+                        Я ЗАБЫЛ ПАРОЛЬ!
+                    </a>
+                </div>
+                <button type="submit" class="login-interactive-element login-button">
+                    Войти
+                </button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

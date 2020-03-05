@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 5000px;
+    background-image: url(./images/Background-main.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #070707;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    position: relative;
+}
+
+.login-form {
+    position: fixed;
+    width: 460px;
+    left: 50%;
+    margin-left: -230px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 45px 80px 60px;
+    background-image: url(./images/Popup-background.png);
+    background-repeat: repeat;
+}
+
+.close-button {
+    background-image: url(./images/Button-close-cross.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 0px;
+    right: -50px;
+}
+
+.login-heading {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.login-description {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 15px 0;
+}
+
+.sign-in-form {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    margin-top: -7px;
+    right: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+}
+
+.login {
+    margin-bottom: 10px;
+}
+
+.login::after {
+    background-image: url(./images/Icon-user.png);
+}
+
+.password::after {
+    background-image: url(./images/Icon-password.png);
+}
+
+.login-interactive-element {
+    width: 300px;
+    height: 43px;
+    border: 2px solid #000101;
+}
+
+.signin-input {
+    background-color: #f9f6f3;
+    padding-left: 15px;
+    padding-right: 35px;
+}
+
+.signin-input::placeholder {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.forgot-password-container {
+    text-align: right;
+    margin: 15px 0;
+    width: 300px;
+}
+
+.forgot-password-link {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.login-button {
+    display: block;
+    background-color: #000000;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+}
