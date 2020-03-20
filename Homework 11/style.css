@@ -210,14 +210,13 @@ p {
 .services-section {
   padding-top: 80px;
   padding-bottom: 80px;
-  font-size: 0;
 }
 
 .service-item {
   width: 280px;
   margin-right: 30px;
   text-align: center;
-  display: inline-block;
+  float: left;
   text-decoration: none;
 }
 
@@ -374,15 +373,16 @@ p {
 
 .wp-theme-section {
   background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
-  padding-top: 45px;
-  padding-bottom: 45px;
+}
+
+.wp-theme-paddings {
+  padding: 45px 30px;
 }
 
 .wp-theme-container {
   width: 540px;
   vertical-align: middle;
   float: left;
-  margin-left: 30px;
 }
 
 .wp-theme-heading {
@@ -405,7 +405,6 @@ p {
 
 .wp-theme-link {
   float: right;
-  margin-right: 30px;
 }
 
 .projects-and-posts-section {
@@ -445,13 +444,12 @@ p {
 }
 
 .portfolio-container {
-  font-size: 0;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .portfolio-item {
-  display: inline-block;
+  float: left;
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -503,6 +501,7 @@ p {
   background-color: rgba(17, 17, 17, 0.7);
   display: none;
   text-align: center;
+  padding-top: 105px;
 }
 
 .portfolio-hover-icon {
@@ -512,7 +511,6 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: 105px;
 }
 
 .link-icon {
@@ -716,12 +714,16 @@ p {
   background-image: linear-gradient(to right, #211b19 0%, #4e3427 100%);
   padding-top: 70px;
   padding-bottom: 60px;
-  font-size: 0;
+}
+
+.statistics-container {
+  width: 960px;
+  margin: 0 auto;
 }
 
 .statistics-item {
   width: 140px;
-  display: inline-block;
+  float: left;
   margin-right: 65px;
   text-align: center;
 }
@@ -777,7 +779,6 @@ p {
   color: #fff;
   font-size: 48px;
   font-weight: 300;
-  line-height: 36px;
   margin-bottom: 15px;
 }
 
@@ -821,6 +822,7 @@ p {
   line-height: 35px;
   text-align: center;
   border-radius: 3px 3px 0 0;
+  display: block;
 }
 
 .month-post {
@@ -831,6 +833,7 @@ p {
   font-weight: 400;
   line-height: 25px;
   border-radius: 0 0 3px 3px;
+  display: block;
 }
 
 .post-pickers {
@@ -947,8 +950,13 @@ p {
   background-color: rgba(17, 17, 17, 0.7);
 }
 
+.recognitions-container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
 .recognition-pic {
-  display: inline-block;
+  float: left;
   margin-right: 90px;
   background-position: center;
   background-repeat: no-repeat;
@@ -984,7 +992,7 @@ p {
 
 .summary-column {
   width: 275px;
-  display: inline-block;
+  float: left;
   margin-right: 40px;
   text-align: left;
   vertical-align: top;

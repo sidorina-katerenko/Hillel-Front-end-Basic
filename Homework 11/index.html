@@ -53,7 +53,7 @@
       </div>
   </section>
   <section class="services-section">
-      <div class="wrapper centering-container">
+      <div class="wrapper centering-container clearfix">
           <a href="#" class="service-item">
               <h2 class="service-title design">Web & App Design</h2>
               <p class="service-description">
@@ -94,7 +94,7 @@
       </div>
   </section>
   <section class="wp-theme-section">
-      <div class="wrapper clearfix">
+      <div class="wrapper clearfix wp-theme-paddings">
           <div class="wp-theme-container">
               <h2 class="wp-theme-heading">
                   <span class="wp-theme-custom-text">Waxom</span> Multipurpose WordPress Theme
@@ -125,7 +125,7 @@
               <button class="project-types-button">Illustration</button>
               <button class="project-types-button">Photography</button>
           </div>
-          <div class="portfolio-container">
+          <div class="portfolio-container clearfix">
               <div class="portfolio-item">
                   <div class="portfolio-pic hand-phone">
                       <div class="portfolio-hover-effect">
@@ -240,9 +240,9 @@
               <p class="video-text">
                   Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
               </p>
-              <time class="video-time">
+              <span class="video-time">
                   03:26
-              </time>
+              </span>
           </div>
       </div>
   </section>
@@ -274,46 +274,48 @@
       </div>
   </section>
   <section class="statistics-section">
-      <div class="wrapper centering-container">
-          <div class="statistics-item">
-              <h2 class="statistics-number clients">
-                  3587
-              </h2>
-              <p class="statistics-title">
-                  Satisfied Clients
-              </p>
-          </div>
-          <div class="statistics-item">
-              <h2 class="statistics-number coffee">
-                  207
-              </h2>
-              <p class="statistics-title">
-                  Cups of coffee
-              </p>
-          </div>
-          <div class="statistics-item">
-              <h2 class="statistics-number blog-posts">
-                  2500
-              </h2>
-              <p class="statistics-title">
-                  Blog posts
-              </p>
-          </div>
-          <div class="statistics-item">
-              <h2 class="statistics-number likes">
-                  873
-              </h2>
-              <p class="statistics-title">
-                  Likes
-              </p>
-          </div>
-          <div class="statistics-item">
-              <h2 class="statistics-number launches">
-                  900
-              </h2>
-              <p class="statistics-title">
-                  We launched
-              </p>
+      <div class="wrapper">
+          <div class="statistics-container clearfix">
+            <div class="statistics-item">
+                <h2 class="statistics-number clients">
+                    3587
+                </h2>
+                <p class="statistics-title">
+                    Satisfied Clients
+                </p>
+            </div>
+            <div class="statistics-item">
+                <h2 class="statistics-number coffee">
+                    207
+                </h2>
+                <p class="statistics-title">
+                    Cups of coffee
+                </p>
+            </div>
+            <div class="statistics-item">
+                <h2 class="statistics-number blog-posts">
+                    2500
+                </h2>
+                <p class="statistics-title">
+                    Blog posts
+                </p>
+            </div>
+            <div class="statistics-item">
+                <h2 class="statistics-number likes">
+                    873
+                </h2>
+                <p class="statistics-title">
+                    Likes
+                </p>
+            </div>
+            <div class="statistics-item">
+                <h2 class="statistics-number launches">
+                    900
+                </h2>
+                <p class="statistics-title">
+                    We launched
+                </p>
+            </div>
           </div>
       </div>
   </section>
@@ -327,14 +329,14 @@
                   Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
               </p>
           </div>
-          <div class="post-container">
+          <div class="post-container clearfix">
               <div class="portfolio-item">
                   <div class="post-pic feet-sand">
                       <div class="portfolio-hover-effect"></div>
-                      <div class="post-date-container">
-                          <div class="day-post">30</div>
-                          <div class="month-post">Sep.</div>
-                      </div>
+                      <time datetime="2019-09-30" class="post-date-container">
+                        <span class="day-post">30</span>
+                        <span class="month-post">Sep.</span>
+                      </time>
                       <div class="pickers-container post-pickers">
                           <div class="slide-picker"></div>
                           <div class="slide-picker"></div>
@@ -359,8 +361,8 @@
                   <div class="post-pic laptop-typing">
                       <div class="portfolio-hover-effect"></div>
                       <div class="post-date-container">
-                          <div class="day-post">30</div>
-                          <div class="month-post">Sep.</div>
+                          <time datetime="2019-09-30" class="day-post">30</time>
+                          <time datetime="2019-09" class="month-post">Sep.</time>
                       </div>
                   </div>
                   <div class="post-description-container">
@@ -379,8 +381,8 @@
                   <div class="post-pic cruise-ship">
                       <div class="portfolio-hover-effect"></div>
                       <div class="post-date-container">
-                          <div class="day-post">30</div>
-                          <div class="month-post">Sep.</div>
+                        <time datetime="2019-09-30" class="day-post">30</time>
+                        <time datetime="2019-09" class="month-post">Sep.</time>
                       </div>
                   </div>
                   <div class="post-description-container">
@@ -403,15 +405,17 @@
       </div>
   </section>
   <section class="recognitions-section">
-      <div class="wrapper centering-container">
-          <div class="recognition-pic barber"></div>
-          <div class="recognition-pic delicious"></div>
-          <div class="recognition-pic we-re-designers"></div>
-          <div class="recognition-pic royal-roasters"></div>
+      <div class="wrapper">
+          <div class="recognitions-container clearfix">
+            <div class="recognition-pic barber"></div>
+            <div class="recognition-pic delicious"></div>
+            <div class="recognition-pic we-re-designers"></div>
+            <div class="recognition-pic royal-roasters"></div>
+          </div>
       </div>
   </section>
   <section class="projects-and-posts-section summary-section">
-      <div class="wrapper centering-container">
+      <div class="wrapper clearfix">
           <div class="summary-column">
               <a href="./index.html" class="summary-logo">
                   <img src="./images/intro/waxom-Logotype.png" width="181" height="56" alt="Waxom company logotype">
