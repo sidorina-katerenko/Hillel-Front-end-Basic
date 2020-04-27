@@ -1,0 +1,167 @@
+.feedback {
+  &-section {
+    padding: 35px 0;
+  }
+
+  &-heading {
+    display: none;
+  }
+
+  &-card {
+    padding: 60px 20px 50px;
+    box-shadow: 0 0 10px rgba(81, 8, 86, 0.08);
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 45px;
+
+    &-secondary {
+      display: none;
+    }
+
+    &-button {
+      border: none;
+      background-color: transparent;
+
+      &:first-child {
+        margin-right: 45px;
+      }
+
+      &-container {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-author {
+    &-photo {
+      width: 136px;
+      height: 136px;
+      margin: 0 auto 50px;
+    }
+
+    &-name {
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 600;
+    }
+
+    &-link {
+      color: #3594dd;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+
+  &-text {
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 750px) {
+  .feedback {
+    &-section {
+      padding-top: 75px;
+      padding-bottom: 40px;
+    }
+
+    &-heading {
+      display: block;
+      margin-bottom: 65px;
+    }
+
+    &-card {
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 65px;
+      padding-right: 65px;
+      padding-bottom: 55px;
+      
+      &-main {
+        display: flex;
+      }
+
+      &-button {
+        &-container {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    &-author {
+      &-photo {
+        margin-right: 50px;
+        margin-bottom: 0;
+      }
+    }
+
+    &-text {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .feedback {
+    &-section {
+      padding-top: 135px;
+      padding-bottom: 30px;
+    }
+
+    &-container {
+      position: relative;
+    }
+
+    &-heading {
+      margin-bottom: 85px;
+    }
+
+    &-card {
+      width: 714px;
+      margin: 0 auto 40px;
+
+      &-secondary {
+        display: flex;
+        position: absolute;
+        top: 119px;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+
+        &-prev {
+          right: 87%;
+
+          &::after {
+            background-image: linear-gradient(90deg, rgba(255,255,255,1) 70%, transparent 100%);
+          }
+        }
+
+        &-next {
+          left: 87%;
+
+          &::after {
+            background-image: linear-gradient(90deg, transparent 0%, rgba(255,255,255,1) 30%);
+          }
+        }
+      }
+
+      &-button {
+        &-container {
+          width: 844px;
+          justify-content: flex-start;
+          margin: 0 auto
+        }
+      }
+    }
+  }
+}

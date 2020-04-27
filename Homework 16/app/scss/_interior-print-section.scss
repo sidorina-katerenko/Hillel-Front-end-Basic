@@ -1,0 +1,129 @@
+.interior-print {
+  &-section {
+    padding-top: 75px;
+    padding-bottom: 250px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: none;
+      width: 11px;
+      height: 130px;
+      position: absolute;
+      left: 50%;
+      margin-left: -5px;
+      bottom: -65px;
+      background-image: url(../images/two-stripes.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-heading {
+    &-additional {
+      margin-bottom: 45px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '2';
+        display: block;
+        position: absolute;
+        font-size: 200px;
+        font-weight: 800;
+        color: #ffffff;
+        text-shadow: 0 0 21px rgba(81, 8, 86, 0.08);
+        left: 30px;
+        top: -100px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &-text {
+    margin-bottom: 45px;
+  }
+
+  &-background {
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+    height: 332px;
+    width: 440px;
+    background-image: url(../images/coach-n-tulip320.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 750px) {
+  .interior-print {
+    &-section {
+      padding-bottom: 400px;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &-heading {
+      &-additional {
+        width: 60%;
+        margin-bottom: 65px;
+      }
+    }
+
+    &-text {
+      width: 80%;
+      margin-bottom: 50px;
+    }
+
+    &-button {
+      width: 35%;
+    }
+
+    &-background {
+      background-image: url(../images/coach-n-tulip750.png);
+      left: 265px;
+      bottom: 100px;
+      width: 793px;
+      height: 599px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .interior-print {
+    &-section {
+      padding-top: 130px;
+      padding-bottom: 560px;
+    }
+
+    &-container {
+      width: 50%;
+      margin-left: auto;
+    }
+
+    &-heading {
+      &-additional {
+        &::before {
+          left: -75px;
+        }
+      }
+    }
+
+    &-button {
+      width: 50%;
+    }
+
+    &-background {
+      background-image: url(../images/coach-n-tulip1170.png);
+      left: -370px;
+      bottom: 155px;
+      width: 1366px;
+      height: 770px;
+    }
+  }
+}

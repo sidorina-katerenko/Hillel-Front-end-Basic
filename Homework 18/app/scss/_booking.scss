@@ -1,0 +1,233 @@
+.booking {
+  &-section {
+    color: $dark-color;
+  }
+
+  &-container {
+    padding: 0;
+  }
+
+  &-form {
+    padding: 40px 20px 65px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    &-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      text-align: center;
+      display: block;
+    }
+
+    &-label {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    &-container {
+      border-radius: 4px;
+      border: 1px solid $grey-color;
+      padding: 19px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &-input {
+    &-custom-ph {
+      color: transparent;
+
+      &::before {
+        content: attr(placeholder);
+        color: $grey-color;
+      }
+
+      &:focus,
+      &:valid {
+        color: $dark-color;
+      }
+      
+      &:focus::before,
+      &:valid::before {
+        content: '' !important;
+      }
+    }
+    &-radio {
+      display: none;
+
+      &-label {
+        padding-left: 30px;
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          border: 2px solid $dark-color;
+          border-radius: 50%;
+          left: 0;
+          bottom: 0;
+          @include bg-standard-properties();
+          background-size: auto;
+        }
+      }
+
+      &:checked + .booking-input-radio-label {
+          &::before {
+            background-image: url(../images/radio-checked.png);
+          }
+      }
+    }
+
+    &-checkbox {
+      display: none;
+
+      &-label {
+        padding-left: 30px;
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          left: 0;
+          bottom: 0;
+          @include bg-standard-properties();
+          background-size: auto;
+          background-image: url(../images/svg/checkbox.svg);
+        }
+      }
+
+      &:checked + .booking-input-checkbox-label {
+          &::before {
+            background-image: url(../images/svg/checkbox-checked.svg);
+          }
+      }
+    }
+  }
+
+  &-button {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .booking {
+    &-section {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 65px 40px;
+    }
+
+    &-form {
+      padding: 55px 45px 65px;
+
+      &-title {
+        text-transform: lowercase;
+        width: 400px;
+        font-size: 32px;
+        margin: 0 auto 20px;
+      }
+
+      label {
+        &:not(.booking-input-radio-label):not(.booking-input-checkbox-label) {
+          padding-left: 25px;
+        }
+      }
+
+      &-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        label {
+          margin-right: 50px;
+        }
+      }
+    }
+
+    &-datetime {
+      display: flex;
+      align-content: space-between;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-height: 100px;
+
+      label {
+        width: 48%;
+      }
+      
+      input {
+        width: 48%;
+      }
+    }
+
+    &-button {
+      width: 165px;
+      
+      &-container {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .booking {
+    &-section {
+      padding-left: 0;
+      padding-right: 0;
+      background-image: url(../images/booking-bg.png);
+      background-size: cover;
+      @include bg-standard-properties();
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+    }
+
+    &-container {
+      padding-left: 175px;
+      padding-right: 175px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &-form {
+      padding-left: 125px;
+      padding-right: 125px;
+
+      &-label {
+        margin-bottom: 55px;
+      }
+
+      input {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

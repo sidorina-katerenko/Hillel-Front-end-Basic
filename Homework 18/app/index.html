@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-menu-shadow" id="myShadow"></div>
+      <div class="header-menu" id="myDropdown">
+        <button class="header-menu-button-close" onclick="myFunction()"></button>
+        <div>
+          <a href="index.html" class="header-menu-logo">
+            <img src="./images/Logo.png" width="110" height="36" alt="Artactive логотип компании">
+          </a>
+          <nav class="header-menu-nav">
+            <a href="#" class="header-menu-nav-item link">Home</a>
+            <a href="shop.html" class="header-menu-nav-item link">Shop</a>
+            <a href="#" class="header-menu-nav-item link">Gallery</a>
+          </nav>
+        </div>
+        <div>
+          <button onclick="myLittlePopup()" class="button button-dark header-menu-button">
+            contact us
+          </button>
+          <button class="button button-orange header-menu-button">
+            book now
+          </button>
+        </div>
+      </div>
+      <div class="wrapper header-container">
+        <a href="index.html" class="logo">
+          <img src="./images/Logo.png" width="154" height="50" alt="Artactive логотип компании">
+        </a>
+        <button class="burger-button" onclick="myFunction()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18"><g><g><path fill="#fff" d="M2.558 3.666h24.889a1.778 1.778 0 1 0 0-3.556H2.557a1.778 1.778 0 0 0 0 3.556zm0 7.11h24.889a1.778 1.778 0 1 0 0-3.555H2.557a1.778 1.778 0 0 0 0 3.555zm0 3.556a1.778 1.778 0 1 0 0 3.556h24.889a1.778 1.778 0 0 0 0-3.556z"/></g></g></svg>
+        </button>
+        <nav class="nav">
+          <a href="#" class="nav-item link">Home</a>
+          <a href="shop.html" class="nav-item link">Shop</a>
+          <a href="#" class="nav-item link">Gallery</a>
+        </nav>
+        <div class="header-buttons-container">
+          <button class="cart-button">
+            <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"><g><g><path fill="#fff" d="M16.742 4.99a4.488 4.488 0 0 0-3.98-2.35c-1.753 0-3.24.965-3.98 2.35zm8.352.73a.5.5 0 0 1 .486.616l-4.303 18.052a.5.5 0 0 1-.486.384H4.733a.5.5 0 0 1-.486-.384L-.056 6.336A.5.5 0 0 1 .43 5.72h5.98c.05-.248.117-.492.198-.73C7.463 2.464 9.895.64 12.762.64s5.3 1.823 6.154 4.35c.08.238.147.482.199.73zM1.355 6.99L5.2 23.119a.5.5 0 0 0 .486.384h14.152a.5.5 0 0 0 .486-.384L24.17 6.991z"/></g></g></svg>
+            <span class="cart-counter">0</span>
+          </button>
+          <button onclick="myPopup()" class="button button-dark header-buttons header-middle-button">
+            contact us
+          </button>
+          <button class="button button-orange header-buttons">
+            book now
+          </button>
+        </div>
+      </div>  
+      <div id="myPopup" class="popup">
+        <button onclick="myPopup()" class="popup-button-close"></button>
+        <form class="popup-form" action="#" method="POST">
+          <div>
+            <legend class="popup-form-title">
+              contact us!
+            </legend>
+            <p class="popup-form-label" for="popUserName">
+              Please leave your details and our manager will contact you within an hour.
+            </p>
+          </div>
+          <div>
+            <label for="popUserName">
+              Name:
+            </label>
+            <input type="text" id="popUserName" name="userName" required placeholder="Gregory Simmmons">
+            <label for="email">
+              Email:
+            </label>
+            <input type="email" id="email" name="userEmail" required placeholder="dwight.fleming@example.com">
+            <label for="phone">
+              Phone:
+            </label>
+            <input type="tel" id="phone" name="userPhone" required placeholder="(307) 555-0133">
+            <label for="message">
+              Your comment:
+            </label>
+            <textarea name="userMessage" id="message" class="popup-message" placeholder="Please leave your comment..." required></textarea>
+          </div>
+          <div class="popup-button-container">
+            <button type="submit" class="button button-orange popup-button">
+              Contact me
+            </button>
+          </div>
+        </form>
+      </div>           
+    </header>
+    <section class="welcome-section">
+      <div class="wrapper">
+        <div class="welcome-container">
+          <div class="welcome-logo"></div>
+          <p class="welcome-text">
+            Our barbershop  is a place of style and mutual understanding in which it is pleasant to spend time.
+          </p>
+          <button class="button button-orange">
+            Book now
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="wrapper">
+        <h2 class="section-heading services-heading">
+          Our  services
+        </h2>
+      </div>
+      <div class="services-content">
+        <div class="wrapper services">
+          <div class="services-content-item services-content-item-scissors">
+            <h2 class="services-content-item-title">
+              Men's haircut
+            </h2>
+            <p class="services-content-item-text">
+              60 min.
+            </p>
+            <p class="services-content-item-text">
+              350 / 400 / 450 ₴
+            </p>
+          </div>
+          <div class="services-content-item services-content-item-bottle">
+            <h2 class="services-content-item-title">
+              Men's haircut
+            </h2>
+            <p class="services-content-item-text">
+              60 min.
+            </p>
+            <p class="services-content-item-text">
+              350 / 400 / 450 ₴
+            </p>
+          </div>
+          <div class="services-content-item services-content-item-shave">
+            <h2 class="services-content-item-title">
+              Men's haircut
+            </h2>
+            <p class="services-content-item-text">
+              60 min.
+            </p>
+            <p class="services-content-item-text">
+              350 / 400 / 450 ₴
+            </p>
+          </div>
+          <div class="services-content-item services-content-item-brush">
+            <h2 class="services-content-item-title">
+              Men's haircut
+            </h2>
+            <p class="services-content-item-text">
+              60 min.
+            </p>
+            <p class="services-content-item-text">
+              350 / 400 / 450 ₴
+            </p>
+          </div>
+          <div class="services-content-item services-content-item-fan">
+            <h2 class="services-content-item-title">
+              Men's haircut
+            </h2>
+            <p class="services-content-item-text">
+              60 min.
+            </p>
+            <p class="services-content-item-text">
+              350 / 400 / 450 ₴
+            </p>
+          </div>
+          <div class="services-content-item services-content-item-razor">
+            <h2 class="services-content-item-title">
+              Men's haircut
+            </h2>
+            <p class="services-content-item-text">
+              60 min.
+            </p>
+            <p class="services-content-item-text">
+              350 / 400 / 450 ₴
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="team-section">
+      <div class="wrapper">
+        <h2 class="section-heading team-heading">
+          Our  team
+        </h2>
+        <div class="team-container">
+          <div class="team-photos">
+            <img class="team-photos-item" src="./images/team-jakob-owens-1.png" alt="Barber team photo">
+            <div class="team-photos-main">
+              <img class="team-photos-main-pic" src="./images/team-jorge-jones.png" alt="Barber Jorge Jones' photo">
+            </div>
+            <img class="team-photos-item" src="./images/team-jakob-owens-3.png" alt="Barber team photo">
+            <img class="team-photos-item" src="./images/team-jakob-owens-4.png" alt="Barber team photo">
+            <button class="team-next-button"></button>
+          </div>
+          <div class="team-interview">
+            <h2 class="team-name">
+              Jorge Jones
+            </h2>
+            <p class="team-text">- How did you become a barber?</p>
+            <p class="team-text">- I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.</p>
+            <p class="team-text">- What exactly do you like in your profession? Why are you blissing?</p>
+            <p class="team-text">- I like to work in a men's team, communicating with interesting people.</p>
+            <p class="team-text">- Why should a person who wants a haircut choose you?</p>
+            <p class="team-text">- Because I'm old and charismatic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="booking-section">
+      <div class="wrapper booking-container">
+        <form class="booking-form" action="#" method="POST">
+          <legend class="booking-form-title">
+            book an appointment right now!
+          </legend>
+          <p class="booking-form-label" for="userName">
+            Please complete all these fields.
+          </p>
+          <label for="userName">
+            Name:
+          </label>
+          <input type="text" id="userName" name="userName" required placeholder="Gregory Simmmons">
+          <div class="booking-datetime">
+            <label for="date">
+              Date:
+            </label>
+            <input class="booking-input-custom-ph" type="date" id="date" name="date" required placeholder="Enter date">
+            <label for="time">
+              Time:
+            </label>
+            <input class="booking-input-custom-ph" type="time" id="time" name="time" min="09:00" max="18:00" required placeholder="Enter time">
+          </div>
+          <label for="masterName1">
+            Choose a master:
+          </label>
+          <div class="booking-form-container">
+            <input class="booking-input-radio" type="radio" name="masterName" id="masterName1" value="Choose_something">
+            <label class="booking-input-radio-label" for="masterName1">
+              Choose something
+            </label>
+            <input class="booking-input-radio" type="radio" name="masterName" id="masterName2" value="Choose_something">
+            <label class="booking-input-radio-label" for="masterName2">
+              Choose something
+            </label>
+            <input class="booking-input-radio" type="radio" name="masterName" id="masterName3" value="Choose_something">
+            <label class="booking-input-radio-label" for="masterName3">
+              Choose something
+            </label>
+            <input class="booking-input-radio" type="radio" name="masterName" id="masterName4" value="Choose_something">
+            <label class="booking-input-radio-label" for="masterName4">
+              Choose something
+            </label>
+          </div>
+          <label for="master1">
+            Choose a master:
+          </label>
+          <div class="booking-form-container">
+            <input class="booking-input-checkbox" type="checkbox" name="masterName" id="master1" value="Choose_something">
+            <label class="booking-input-checkbox-label" for="master1">
+              Choose something
+            </label>
+            <input class="booking-input-checkbox" type="checkbox" name="masterName" id="master2" value="Choose_something">
+            <label class="booking-input-checkbox-label" for="master2">
+              Choose something
+            </label>
+            <input class="booking-input-checkbox" type="checkbox" name="masterName" id="master3" value="Choose_something">
+            <label class="booking-input-checkbox-label" for="master3">
+              Choose something
+            </label>
+            <input class="booking-input-checkbox" type="checkbox" name="masterName" id="master4" value="Choose_something">
+            <label class="booking-input-checkbox-label" for="master4">
+              Choose something
+            </label>
+          </div>
+          <div class="booking-button-container">
+            <button type="submit" class="button button-orange booking-button">
+              Book now
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="products-section">
+      <div class="wrapper">
+        <h2 class="section-heading products-heading">
+          Popular  products
+        </h2>
+        <div class="products-container">
+          <div class="products-item products-item-main">
+            <div class="products-item-image">
+              <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+            </div>
+            <div class="products-item-description">
+              <h2 class="products-item-title">
+                Barbers
+              </h2>
+              <p>
+                Premium beard balm
+              </p>
+              <p>
+                50 ml
+              </p>
+              <p>
+                New York original
+              </p>
+              <p class="products-item-price">
+                $ 490.00
+              </p>
+            </div>
+            <div class="products-item-button-container">
+              <button class="button button-light">
+                shop now
+              </button>
+              <button class="button-light products-item-button"></button>
+            </div>
+          </div>
+          <div class="products-item">
+            <div class="products-item-image">
+              <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+            </div>
+            <div class="products-item-description">
+              <h2 class="products-item-title">
+                Barbers
+              </h2>
+              <p>
+                Premium beard balm
+              </p>
+              <p>
+                50 ml
+              </p>
+              <p>
+                New York original
+              </p>
+              <p class="products-item-price">
+                $ 490.00
+              </p>
+            </div>
+            <div class="products-item-button-container">
+              <button class="button button-light">
+                shop now
+              </button>
+              <button class="button-light products-item-button"></button>
+            </div>
+          </div>
+          <div class="products-item">
+            <span class="products-item-special">
+              sale
+            </span>
+            <div class="products-item-image">
+              <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+            </div>
+            <div class="products-item-description">
+              <h2 class="products-item-title">
+                Barbers
+              </h2>
+              <p>
+                Premium beard balm
+              </p>
+              <p>
+                50 ml
+              </p>
+              <p>
+                New York original
+              </p>
+              <p class="products-item-price">
+                $ 490.00
+              </p>
+            </div>
+            <div class="products-item-button-container">
+              <button class="button button-light">
+                shop now
+              </button>
+              <button class="button-light products-item-button"></button>
+            </div>
+          </div>
+          <div class="products-item">
+            <div class="products-item-image">
+              <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+            </div>
+            <div class="products-item-description">
+              <h2 class="products-item-title">
+                Barbers
+              </h2>
+              <p>
+                Premium beard balm
+              </p>
+              <p>
+                50 ml
+              </p>
+              <p>
+                New York original
+              </p>
+              <p class="products-item-price">
+                $ 490.00
+              </p>
+            </div>
+            <div class="products-item-button-container">
+              <button class="button button-light">
+                shop now
+              </button>
+              <button class="button-light products-item-button"></button>
+            </div>
+          </div>
+          <div class="products-slider-container">
+            <button class="products-slider-button products-slider-button-prev"></button>
+            <button class="products-slider-button products-slider-button-next"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="review-section">
+      <div class="wrapper review-wrapper">
+        <h2 class="section-heading review-heading">
+          Our  reviews
+        </h2>
+        <div class="review-container">
+          <div class="review-photos">
+            <img class="review-photos-item" src="./images/team-jakob-owens-1.png" alt="Barber team photo">
+            <div class="review-photos-main">
+              <img class="review-photos-main-pic" src="./images/team-jorge-jones.png" alt="Barber Jorge Jones' photo">
+            </div>
+            <img class="review-photos-item" src="./images/team-jakob-owens-3.png" alt="Barber team photo">
+            <img class="review-photos-item" src="./images/team-jakob-owens-4.png" alt="Barber team photo">
+            <button class="review-button review-button-prev"></button>
+            <button class="review-button review-button-next"></button>
+          </div>
+          <div class="review-interview">
+            <h2 class="review-name">
+              Jorge Jones
+            </h2>
+            <p class="review-text">- How did you become a barber?</p>
+            <p class="review-text">- I decided to master the creative profession. And he found himself precisely in this. So my life has changed dramatically.</p>
+            <p class="review-text">- What exactly do you like in your profession? Why are you blissing?</p>
+            <p class="review-text">- I like to work in a men's team, communicating with interesting people.</p>
+            <p class="review-text">- Why should a person who wants a haircut choose you?</p>
+            <p class="review-text">- Because I'm old and charismatic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="wrapper contact-container">
+        <div class="contact-item">
+          <h2 class="contact-heading">
+            Contact us
+          </h2>
+          <p class="contact-text">
+            Ukraine, Kyiv
+          </p>
+          <p class="contact-text">
+            str. Oleshi 15, 62000 
+          </p>
+          <a href="mailto:support@gmail.com" class="contact-text">
+            support@gmail.com
+          </a>
+          <a href="tel:+38044152566954" class="contact-text">
+            +38 (044) 15 25 66 954
+          </a>
+          <div class="contact-social-media-container">
+            <a href="#" class="contact-social-media contact-social-media-instagram"></a>
+            <a href="#" class="contact-social-media contact-social-media-youtube"></a>
+            <a href="#" class="contact-social-media contact-social-media-facebook"></a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <h2 class="contact-heading">
+            schedule
+          </h2>
+          <p class="contact-text">
+            <span class="contact-text-days">Mon - fri</span>
+            10:00 - 20:00
+          </p>
+          <p class="contact-text">
+            <span class="contact-text-days">Sat - sun</span>
+            12:00 - 22:00
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-section">
+      <div class="wrapper footer-container">
+        <a href="index.html" class="footer-logo">
+          <img class="footer-logo-pic" src="./images/Logo.png" alt="Barber Shop Company Logo">
+        </a>
+        <div class="footer-item-container">
+          <nav class="footer-nav footer-item">
+            <a href="#" class="footer-nav-item link">Home</a>
+            <a href="shop.html" class="footer-nav-item link">Shop</a>
+            <a href="#" class="footer-nav-item link">Gallery</a>
+            <a href="#" class="footer-nav-item link">Contact us</a>
+          </nav>
+          <div class="footer-item">
+            <h2 class="footer-heading">
+              Visit us
+            </h2>
+            <p class="footer-text">
+              Ukraine, Kyiv 
+            </p>
+            <p class="footer-text">
+              str. Oleshi 15, 62000 
+            </p>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-heading">
+              Contact us
+            </h2>
+            <a href="mailto:support@gmail.com" class="footer-text">
+              support@gmail.com
+            </a>
+            <a href="tel:+38044152566954" class="footer-text">
+              +38 (044) 15 25 66 954
+            </a>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-heading">
+              Follow us
+            </h2>
+            <div class="footer-social-media-container">
+              <a href="#" class="footer-social-media footer-social-media-instagram"></a>
+              <a href="#" class="footer-social-media footer-social-media-youtube"></a>
+              <a href="#" class="footer-social-media footer-social-media-facebook"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("header-menu-show");
+        document.getElementById("myShadow").classList.toggle("header-menu-shadow-show");
+      }
+      
+      function myPopup() {
+        document.getElementById("myPopup").classList.toggle("popup-show");
+        document.getElementById("myShadow").classList.toggle("header-menu-shadow-show");
+      }
+      
+      function myLittlePopup() {
+        document.getElementById("myPopup").classList.toggle("popup-show");
+        document.getElementById("myDropdown").classList.toggle("header-menu-show");
+      }
+    </script>
+  </body>
+</html>

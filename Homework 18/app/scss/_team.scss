@@ -1,0 +1,146 @@
+.team {
+  &-section {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+
+  &-heading {
+    left: 100%;
+    transform: translateX(-100%);
+    margin-bottom: 40px;
+  }
+  
+  &-photos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    &-item {
+      display: none;
+    }
+
+    &-main {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 15px;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: $orange-color;
+        top: -15px;
+        right: -15px;
+        bottom: -15px;
+        left: 15px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &-next-button {
+    border: none;
+    width: 53px;
+    height: 53px;
+    background-color: $beige-color;
+    background-image: url(../images/arrow-right.png);
+    @include bg-standard-properties();
+    background-size: auto;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $dark-beige-color;
+    }
+  }
+
+  &-name {
+    color: $orange-color;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    color: $dark-color;
+    text-transform: lowercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .team {
+    &-section {
+      padding-top: 55px;
+      padding-bottom: 65px;
+    }
+
+    &-photos {
+      margin-bottom: 35px;
+
+      &-item {
+        display: block;
+        margin-right: 10px;
+      }
+
+      &-main {
+        margin-bottom: 0;
+        width: 190px;
+        height: 283px;
+        margin-right: 25px;
+
+        &-pic {
+          width: 190px;
+          height: 283px;
+        }
+      }
+    }
+
+    &-next-button {
+      margin-left: auto;
+    }
+
+    &-interview {
+      width: 440px;
+      margin-left: 18vw;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .team {
+    &-section {
+      padding-top: 90px;
+      padding-bottom: 115px;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &-photos {
+      margin-bottom: 0;
+      margin-right: 50px;
+
+      &-item {
+        width: 134px;
+        height: 200px;
+      }
+
+      &-main {
+        width: 197px;
+        height: 293px;
+
+        &-pic {
+          width: 197px;
+          height: 293px;
+        }
+      }
+    }
+
+    &-interview {
+      width: auto;
+      margin: 0;
+    }
+  }
+}

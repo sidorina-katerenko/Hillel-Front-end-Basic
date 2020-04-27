@@ -1,0 +1,205 @@
+.banner-print {
+  &-section {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    background-color: #faf8fb;
+  }
+
+  &-heading {
+    &-additional {
+      margin-bottom: 55px;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '3';
+        display: block;
+        position: absolute;
+        font-size: 200px;
+        font-weight: 800;
+        color: #ffffff;
+        text-shadow: 0 0 21px rgba(81, 8, 86, 0.08);
+        left: 30px;
+        top: -100px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &-text {
+    margin-bottom: 30px;
+  }
+
+  &-image {
+    width: 100%;
+    height: 255px;
+    background-image: url(../images/business-cards320.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 40px;
+  }
+
+  &-button {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      display: none;
+      position: absolute;
+      z-index: -1;
+      bottom: -5px;
+      left: 100%;
+      width: 121px;
+      height: 287px;
+      background-image: url(../images/paper-plane750.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-order {
+    &-question {
+      color: #383d52;
+      font-size: 16px;
+      line-height: 30px;
+      font-style: italic;
+    }
+
+    &-action {
+      color: #383d52;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      width: 55%;
+      margin-bottom: 25px;
+    }
+
+    &-input {
+      border-color: #ccc;
+
+      &-name {
+        margin-bottom: 10px;
+      }
+
+      &-phone {
+        margin-bottom: 35px;
+      }
+
+      &::placeholder {
+        color: #868995;
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .banner-print {
+    &-section {
+      padding-top: 110px;
+      padding-bottom: 75px;
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-heading {
+      &-additional {
+        width: 60%;
+        margin-bottom: 55px;
+      }
+    }
+
+    &-text {
+      width: 85%;
+
+      &-container {
+        margin-bottom: 80px;
+      }
+    }
+
+    &-form {
+      width: 40%;
+    }
+
+    &-image {
+      order: 1;
+      width: 45%;
+      height: 381px;
+      background-image: url(../images/business-cards750.png);
+      margin-bottom: 0;
+    }
+
+    &-button {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .banner-print {
+    &-section {
+      padding-top: 0;
+      padding-bottom: 155px;
+    }
+
+    &-heading {
+      &-additional {
+        &::before {
+          left: -75px;
+        }
+      }
+    }
+
+    &-text {
+      &-container {
+        width: 55%;
+      }
+    }
+
+    &-image {
+      width: 40%;
+      order: 0;
+      height: 544px;
+      background-image: url(../images/business-cards1170.png);
+    }
+
+    &-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 60%;
+    }
+
+    &-order {
+      &-text {
+        width: 100%;
+      }
+
+      &-input {
+        width: 30%;
+        margin-bottom: 0;
+      }
+    }
+
+    &-button {
+      width: 25%;
+
+      &::after {
+        background-image: url(../images/paper-plane1170.png);
+        width: 486px;
+        height: 279px;
+        left: 80%;
+        bottom: -20px;
+      }
+    }
+  }
+}

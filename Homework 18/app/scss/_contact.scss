@@ -1,0 +1,128 @@
+.contact {
+  &-section {
+    padding-top: 45px;
+    padding-bottom: 10px;
+  }
+
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url(../images/contact-bg-mobile.png);
+    padding-bottom: 215px;
+  }
+
+  &-item {
+    margin-bottom: 35px;
+  }
+
+  &-heading {
+    color: $orange-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &-text {
+    color: $dark-color;
+    font-weight: 500;
+    display: block;
+    text-transform: lowercase;
+    text-decoration: none;
+    margin-bottom: 8px;
+
+    &-days {
+      display: inline-block;
+      width: 90px;
+    }
+  }
+
+  &-social-media {
+    display: block;
+    width: 20px;
+    height: 16px;
+    background-size: auto;
+    @include bg-standard-properties();
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &-container {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    &-instagram {
+      background-image: url(../images/instagram-icon.png);
+    }
+
+    &-youtube {
+      background-image: url(../images/youtube-icon.png);
+    }
+
+    &-facebook {
+      background-image: url(../images/facebook-icon.png);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    &-section {
+      padding-top: 100px;
+      padding-bottom: 110px;
+    }
+
+    &-container {
+      padding-bottom: 430px;
+      background-image: url(../images/contact-bg-tablet.png);
+    }
+    
+    &-item {
+      margin-bottom: 30px;
+    }
+  
+    &-heading {
+      text-transform: none;
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+    
+    &-text {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      margin-left: 45px;
+    }
+
+    &-social-media {
+      &-container {
+        margin-left: 45px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .contact {
+    &-section {
+      padding-top: 130px;
+      padding-bottom: 140px;
+    }
+
+    &-container {
+      padding-bottom: 0;
+      background-image: url(../images/contact-bg-desktop.png);
+      background-position: right;
+      display: block;
+    }
+
+    &-heading {
+      font-size: 64px;
+    }
+  }
+}

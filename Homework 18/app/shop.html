@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+    <link rel="stylesheet" href="./css/style-shop.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-menu-shadow" id="myShadow"></div>
+      <div class="header-menu" id="myDropdown">
+        <button class="header-menu-button-close" onclick="myFunction()"></button>
+        <div>
+          <a href="index.html" class="header-menu-logo">
+            <img src="./images/Logo.png" width="110" height="36" alt="Artactive логотип компании">
+          </a>
+          <nav class="header-menu-nav">
+            <a href="index.html" class="header-menu-nav-item link">Home</a>
+            <a href="#" class="header-menu-nav-item link">Shop</a>
+            <a href="#" class="header-menu-nav-item link">Gallery</a>
+          </nav>
+        </div>
+        <div>
+          <button onclick="myLittlePopup()" class="button button-dark header-menu-button">
+            contact us
+          </button>
+          <button class="button button-orange header-menu-button">
+            book now
+          </button>
+        </div>
+      </div>
+      <div class="wrapper header-container">
+        <a href="index.html" class="logo">
+          <img src="./images/Logo.png" width="154" height="50" alt="Artactive логотип компании">
+        </a>
+        <button class="burger-button" onclick="myFunction()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18"><g><g><path fill="#fff" d="M2.558 3.666h24.889a1.778 1.778 0 1 0 0-3.556H2.557a1.778 1.778 0 0 0 0 3.556zm0 7.11h24.889a1.778 1.778 0 1 0 0-3.555H2.557a1.778 1.778 0 0 0 0 3.555zm0 3.556a1.778 1.778 0 1 0 0 3.556h24.889a1.778 1.778 0 0 0 0-3.556z"/></g></g></svg>
+        </button>
+        <nav class="nav">
+          <a href="index.html" class="nav-item link">Home</a>
+          <a href="#" class="nav-item link">Shop</a>
+          <a href="#" class="nav-item link">Gallery</a>
+        </nav>
+        <div class="header-buttons-container">
+          <button class="cart-button">
+            <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25"><g><g><path fill="#fff" d="M16.742 4.99a4.488 4.488 0 0 0-3.98-2.35c-1.753 0-3.24.965-3.98 2.35zm8.352.73a.5.5 0 0 1 .486.616l-4.303 18.052a.5.5 0 0 1-.486.384H4.733a.5.5 0 0 1-.486-.384L-.056 6.336A.5.5 0 0 1 .43 5.72h5.98c.05-.248.117-.492.198-.73C7.463 2.464 9.895.64 12.762.64s5.3 1.823 6.154 4.35c.08.238.147.482.199.73zM1.355 6.99L5.2 23.119a.5.5 0 0 0 .486.384h14.152a.5.5 0 0 0 .486-.384L24.17 6.991z"/></g></g></svg>
+            <span class="cart-counter">0</span>
+          </button>
+          <button onclick="myPopup()" class="button button-dark header-buttons header-middle-button">
+            contact us
+          </button>
+          <button class="button button-orange header-buttons">
+            book now
+          </button>
+        </div>
+      </div>  
+      <div id="myPopup" class="popup">
+        <button onclick="myPopup()" class="popup-button-close"></button>
+        <form class="popup-form" action="#" method="POST">
+          <div>
+            <legend class="popup-form-title">
+              contact us!
+            </legend>
+            <p class="popup-form-label" for="popUserName">
+              Please leave your details and our manager will contact you within an hour.
+            </p>
+          </div>
+          <div>
+            <label for="popUserName">
+              Name:
+            </label>
+            <input type="text" id="popUserName" name="userName" required placeholder="Gregory Simmmons">
+            <label for="email">
+              Email:
+            </label>
+            <input type="email" id="email" name="userEmail" required placeholder="dwight.fleming@example.com">
+            <label for="phone">
+              Phone:
+            </label>
+            <input type="tel" id="phone" name="userPhone" required placeholder="(307) 555-0133">
+            <label for="message">
+              Your comment:
+            </label>
+            <textarea name="userMessage" id="message" class="popup-message" placeholder="Please leave your comment..." required></textarea>
+          </div>
+          <div class="popup-button-container">
+            <button type="submit" class="button button-orange popup-button">
+              Contact me
+            </button>
+          </div>
+        </form>
+      </div>           
+    </header>
+    <section class="intro-section">
+      <div class="wrapper intro-container">
+        <button class="intro-button intro-button-prev"></button>
+        <button class="intro-button intro-button-next"></button>
+        <svg class="intro-image" viewBox="0 0 236 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 38.1215H28.8453V51.0704H0V38.1215Z" fill="#222222"/>
+          <path d="M91.321 28.4876C101.378 28.4876 108.784 30.5249 113.541 34.5994C118.366 38.674 120.778 44.1298 120.778 50.9668C120.778 55.3867 119.691 59.4268 117.516 63.087C115.342 66.6782 112.012 69.5787 107.527 71.7887C103.111 73.9296 97.6405 75 91.1172 75C86.0888 75 81.1283 74.3439 76.2358 73.0318C71.4113 71.6505 67.3002 69.7168 63.9027 67.2307L70.426 54.3854C73.144 56.4572 76.2698 58.0801 79.8033 59.2541C83.3367 60.3591 86.9721 60.9116 90.7094 60.9116C94.8545 60.9116 98.1161 60.0829 100.494 58.4254C102.873 56.768 104.062 54.4544 104.062 51.4848C104.062 48.3771 102.805 46.029 100.291 44.4406C97.8443 42.8522 93.5634 42.058 87.4478 42.058H69.2029L72.8722 1.24309H116.395V14.7099H86.6324L85.5112 28.4876H91.321Z" fill="#222222"/>
+          <path d="M158.055 75C152.144 75 146.877 73.5152 142.257 70.5456C137.636 67.576 134.001 63.2942 131.35 57.7003C128.768 52.0373 127.477 45.3039 127.477 37.5C127.477 29.6961 128.768 22.9972 131.35 17.4033C134.001 11.7403 137.636 7.42403 142.257 4.45442C146.877 1.48481 152.144 0 158.055 0C163.967 0 169.233 1.48481 173.854 4.45442C178.475 7.42403 182.076 11.7403 184.658 17.4033C187.308 22.9972 188.633 29.6961 188.633 37.5C188.633 45.3039 187.308 52.0373 184.658 57.7003C182.076 63.2942 178.475 67.576 173.854 70.5456C169.233 73.5152 163.967 75 158.055 75ZM158.055 60.808C162.404 60.808 165.802 58.9088 168.248 55.1105C170.762 51.3122 172.019 45.442 172.019 37.5C172.019 29.558 170.762 23.6878 168.248 19.8895C165.802 16.0912 162.404 14.192 158.055 14.192C153.774 14.192 150.377 16.0912 147.863 19.8895C145.416 23.6878 144.193 29.558 144.193 37.5C144.193 45.442 145.416 51.3122 147.863 55.1105C150.377 58.9088 153.774 60.808 158.055 60.808Z" fill="#222222"/>
+          <path d="M202.925 57.0787C200.309 57.0787 198.168 56.1809 196.503 54.3854C194.872 52.5552 194.057 50.1209 194.057 47.0822C194.057 44.0435 194.872 41.6264 196.503 39.8308C198.168 38.0007 200.309 37.0856 202.925 37.0856C205.541 37.0856 207.664 38.0007 209.295 39.8308C210.926 41.6264 211.741 44.0435 211.741 47.0822C211.741 50.1209 210.926 52.5552 209.295 54.3854C207.664 56.1809 205.541 57.0787 202.925 57.0787ZM224.176 37.5H230.241L205.881 73.7569H199.816L224.176 37.5ZM202.925 52.8315C204.08 52.8315 204.98 52.3481 205.626 51.3812C206.305 50.4144 206.645 48.9814 206.645 47.0822C206.645 45.183 206.305 43.75 205.626 42.7831C204.98 41.8163 204.08 41.3329 202.925 41.3329C201.804 41.3329 200.903 41.8336 200.224 42.8349C199.544 43.8018 199.204 45.2175 199.204 47.0822C199.204 48.9468 199.544 50.3798 200.224 51.3812C200.903 52.3481 201.804 52.8315 202.925 52.8315ZM227.132 74.1713C225.434 74.1713 223.905 73.7742 222.546 72.98C221.221 72.1512 220.184 70.9772 219.437 69.4579C218.689 67.9385 218.316 66.1775 218.316 64.1747C218.316 62.172 218.689 60.4109 219.437 58.8916C220.184 57.3722 221.221 56.2155 222.546 55.4213C223.905 54.5925 225.434 54.1782 227.132 54.1782C229.748 54.1782 231.872 55.0932 233.503 56.9233C235.168 58.7189 236 61.1361 236 64.1747C236 67.2134 235.168 69.6478 233.503 71.4779C231.872 73.2735 229.748 74.1713 227.132 74.1713ZM227.132 69.924C228.288 69.924 229.188 69.4406 229.833 68.4738C230.513 67.4724 230.853 66.0394 230.853 64.1747C230.853 62.3101 230.513 60.8943 229.833 59.9275C229.188 58.9261 228.288 58.4254 227.132 58.4254C226.011 58.4254 225.111 58.9088 224.431 59.8757C223.752 60.8425 223.412 62.2756 223.412 64.1747C223.412 66.0739 223.752 67.5069 224.431 68.4738C225.111 69.4406 226.011 69.924 227.132 69.924Z" fill="#222222"/>
+        </svg>
+        <svg class="intro-image" viewBox="0 0 236 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.4436 11.0552C17.7233 11.4576 18.7257 12.1354 19.4508 13.0884C20.176 14.0203 20.5385 15.1745 20.5385 16.5511C20.5385 18.4995 19.7707 20.0032 18.2352 21.0622C16.7209 22.0999 14.5028 22.6188 11.5809 22.6188H0V0.381214H10.9411C13.671 0.381214 15.7611 0.900091 17.2114 1.93784C18.683 2.9756 19.4188 4.38398 19.4188 6.16298C19.4188 7.24309 19.1522 8.20672 18.6191 9.05387C18.1072 9.90101 17.382 10.5681 16.4436 11.0552ZM5.15063 4.25691V9.49862H10.3013C11.5809 9.49862 12.5513 9.27624 13.2125 8.83149C13.8736 8.38674 14.2042 7.7302 14.2042 6.86188C14.2042 5.99355 13.8736 5.34761 13.2125 4.92403C12.5513 4.47928 11.5809 4.25691 10.3013 4.25691H5.15063ZM11.197 18.7431C12.562 18.7431 13.5857 18.5207 14.2682 18.076C14.972 17.6312 15.3239 16.9429 15.3239 16.011C15.3239 14.1685 13.9483 13.2472 11.197 13.2472H5.15063V18.7431H11.197Z" fill="#222222"/>
+          <path d="M38.7305 22.6188L34.4116 16.424H34.1557H29.6449V22.6188H24.4622V0.381214H34.1557C36.1391 0.381214 37.856 0.709483 39.3063 1.36602C40.7779 2.02256 41.9083 2.95442 42.6974 4.1616C43.4865 5.36878 43.8811 6.79834 43.8811 8.45028C43.8811 10.1022 43.4759 11.5318 42.6654 12.7389C41.8763 13.925 40.7459 14.8356 39.2743 15.471L44.297 22.6188H38.7305ZM38.6345 8.45028C38.6345 7.20074 38.2293 6.2477 37.4188 5.59116C36.6083 4.91344 35.4247 4.57458 33.8677 4.57458H29.6449V12.326H33.8677C35.4247 12.326 36.6083 11.9871 37.4188 11.3094C38.2293 10.6317 38.6345 9.67864 38.6345 8.45028Z" fill="#222222"/>
+          <path d="M62.7353 17.8536H52.3381L50.3546 22.6188H45.044L55.0254 0.381214H60.144L70.1573 22.6188H64.7188L62.7353 17.8536ZM61.1038 13.9461L57.5527 5.43232L54.0016 13.9461H61.1038Z" fill="#222222"/>
+          <path d="M93.0193 0.381214V22.6188H88.7644L77.5994 9.1174V22.6188H72.4807V0.381214H76.7676L87.9006 13.8826V0.381214H93.0193Z" fill="#222222"/>
+          <path d="M98.3176 0.381214H108.491C110.922 0.381214 113.066 0.847145 114.921 1.77901C116.798 2.68969 118.248 3.98158 119.272 5.6547C120.317 7.32781 120.84 9.27624 120.84 11.5C120.84 13.7238 120.317 15.6722 119.272 17.3453C118.248 19.0184 116.798 20.3209 114.921 21.2528C113.066 22.1634 110.922 22.6188 108.491 22.6188H98.3176V0.381214ZM108.235 18.3936C110.474 18.3936 112.255 17.7795 113.578 16.5511C114.921 15.3016 115.593 13.6179 115.593 11.5C115.593 9.38214 114.921 7.70902 113.578 6.48066C112.255 5.23112 110.474 4.60635 108.235 4.60635H103.5V18.3936H108.235Z" fill="#222222"/>
+          <path d="M134.529 14.7403V22.6188H129.346V14.6768L120.676 0.381214H126.179L132.161 10.261L138.144 0.381214H143.23L134.529 14.7403Z" fill="#222222"/>
+          <path d="M161.817 23C160.047 23 158.33 22.767 156.666 22.3011C155.024 21.814 153.702 21.1892 152.699 20.4268L154.459 16.5511C155.419 17.25 156.56 17.8112 157.882 18.2348C159.204 18.6584 160.527 18.8702 161.849 18.8702C163.321 18.8702 164.408 18.6584 165.112 18.2348C165.816 17.7901 166.168 17.2076 166.168 16.4876C166.168 15.9581 165.955 15.5239 165.528 15.1851C165.123 14.825 164.59 14.5391 163.928 14.3273C163.289 14.1156 162.414 13.8826 161.305 13.6285C159.599 13.2261 158.202 12.8237 157.114 12.4213C156.027 12.0189 155.088 11.3729 154.299 10.4834C153.531 9.59392 153.147 8.40792 153.147 6.92541C153.147 5.63352 153.499 4.46869 154.203 3.43094C154.907 2.37201 155.963 1.53545 157.37 0.92127C158.799 0.30709 160.537 0 162.585 0C164.014 0 165.411 0.169429 166.776 0.508286C168.141 0.847145 169.335 1.33425 170.359 1.96961L168.759 5.87707C166.69 4.71225 164.622 4.12983 162.553 4.12983C161.102 4.12983 160.025 4.3628 159.322 4.82873C158.639 5.29466 158.298 5.90884 158.298 6.67127C158.298 7.4337 158.692 8.00552 159.482 8.38674C160.292 8.74678 161.518 9.10681 163.161 9.46685C164.867 9.86924 166.264 10.2716 167.352 10.674C168.439 11.0764 169.367 11.7118 170.135 12.5801C170.924 13.4484 171.318 14.6238 171.318 16.1064C171.318 17.3771 170.956 18.5419 170.231 19.6008C169.527 20.6386 168.461 21.4645 167.032 22.0787C165.603 22.6929 163.864 23 161.817 23Z" fill="#222222"/>
+          <path d="M189.608 17.8536H179.211L177.227 22.6188H171.917L181.898 0.381214H187.017L197.03 22.6188H191.591L189.608 17.8536ZM187.976 13.9461L184.425 5.43232L180.874 13.9461H187.976Z" fill="#222222"/>
+          <path d="M199.353 0.381214H204.536V18.4254H215.765V22.6188H199.353V0.381214Z" fill="#222222"/>
+          <path d="M236 18.4889V22.6188H218.661V0.381214H235.584V4.51105H223.811V9.33978H234.208V13.3425H223.811V18.4889H236Z" fill="#222222"/>
+        </svg>
+      </div>
+    </section>
+    <section class="gallery-section">
+      <div class="wrapper">
+        <div class="gallery-search-container">
+          <input type="search" class="gallery-search" placeholder="Search something you need...">
+          <button class="button button-orange gallery-search-button">
+            search
+          </button>
+        </div>
+        <div class="gallery-view-container">
+          <button class="gallery-view-button" onclick="myFilters()">
+            <span class="gallery-view-button-text">filters</span>
+            <svg height="16" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.01632 12H11.0229V10H7.01632V12ZM0.00488281 0V2H18.0343V0H0.00488281ZM3.00978 7H15.0294V5H3.00978V7Z" fill="#FF7A00"/>
+            </svg>              
+          </button>
+          <button class="gallery-view-button gallery-view-button-grid">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-2-inside-1" fill="white">
+              <rect x="3" y="3" width="8" height="8" rx="1"/>
+              </mask>
+              <rect x="3" y="3" width="8" height="8" rx="1" stroke="#222222" stroke-width="4" mask="url(#path-2-inside-1)"/>
+              <mask id="path-3-inside-2" fill="white">
+              <rect x="13" y="3" width="8" height="8" rx="1"/>
+              </mask>
+              <rect x="13" y="3" width="8" height="8" rx="1" stroke="black" stroke-width="4" mask="url(#path-3-inside-2)"/>
+              <mask id="path-4-inside-3" fill="white">
+              <rect x="13" y="13" width="8" height="8" rx="1"/>
+              </mask>
+              <rect x="13" y="13" width="8" height="8" rx="1" stroke="#222222" stroke-width="4" mask="url(#path-4-inside-3)"/>
+              <mask id="path-5-inside-4" fill="white">
+              <rect x="3" y="13" width="8" height="8" rx="1"/>
+              </mask>
+              <rect x="3" y="13" width="8" height="8" rx="1" stroke="black" stroke-width="4" mask="url(#path-5-inside-4)"/>
+            </svg>
+          </button>
+        </div>
+        <div class="gallery-main">
+          <div id="myFilters" class="gallery-filters-container">
+            <h2 class="gallery-filters-heading" id="myFiltersTitle">
+              <span class="gallery-view-button-text">filters</span>
+              <svg height="16" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.01632 12H11.0229V10H7.01632V12ZM0.00488281 0V2H18.0343V0H0.00488281ZM3.00978 7H15.0294V5H3.00978V7Z" fill="#FF7A00"/>
+              </svg> 
+            </h2>
+            <button class="gallery-filters-button-close" onclick="myFilters()"></button>
+            <form class="gallery-filters-form" action="#" method="GET">
+              <h2 class="gallery-filters-form-title">
+                Choose something
+              </h2>
+              <div class="gallery-filters-form-container">
+                <input class="gallery-filters-input-checkbox" type="checkbox" name="masterName" id="master1" value="Choose_something">
+                <label class="gallery-filters-input-checkbox-label" for="master1">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-checkbox" type="checkbox" name="masterName" id="master2" value="Choose_something">
+                <label class="gallery-filters-input-checkbox-label" for="master2">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-checkbox" type="checkbox" name="masterName" id="master3" value="Choose_something">
+                <label class="gallery-filters-input-checkbox-label" for="master3">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-checkbox" type="checkbox" name="masterName" id="master4" value="Choose_something">
+                <label class="gallery-filters-input-checkbox-label" for="master4">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-checkbox" type="checkbox" name="masterName" id="master5" value="Choose_something">
+                <label class="gallery-filters-input-checkbox-label" for="master5">
+                  Choose something
+                </label>
+              </div>
+              <h2 class="gallery-filters-form-title">
+                Choose something
+              </h2>
+              <div class="gallery-filters-form-container">
+                <input class="gallery-filters-input-radio" type="radio" name="masterName" id="masterName1" value="Choose_something">
+                <label class="gallery-filters-input-radio-label" for="masterName1">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-radio" type="radio" name="masterName" id="masterName2" value="Choose_something">
+                <label class="gallery-filters-input-radio-label" for="masterName2">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-radio" type="radio" name="masterName" id="masterName3" value="Choose_something">
+                <label class="gallery-filters-input-radio-label" for="masterName3">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-radio" type="radio" name="masterName" id="masterName4" value="Choose_something">
+                <label class="gallery-filters-input-radio-label" for="masterName4">
+                  Choose something
+                </label>
+                <input class="gallery-filters-input-radio" type="radio" name="masterName" id="masterName5" value="Choose_something">
+                <label class="gallery-filters-input-radio-label" for="masterName5">
+                  Choose something
+                </label>
+              </div>
+              <h2 class="gallery-filters-form-title">
+                Choose something
+              </h2>
+              <div class="range-imitation">
+                <div class="range-imitation-line range-imitation-line-one"></div>
+                <button type="button" class="range-imitation-button">
+                  <span class="range-imitation-button-text">60</span>
+                </button>
+                <div class="range-imitation-line range-imitation-line-two"></div>
+                <button type="button" class="range-imitation-button">
+                  <span class="range-imitation-button-text">800</span>
+                </button>
+                <div class="range-imitation-line range-imitation-line-three"></div>
+              </div>
+              <div class="range-imitation-input-container">
+                <label for="range-from" class="range-imitation-input-label">
+                  From:
+                </label>
+                <input id="range-from" type="text" class="range-imitation-input" value="60">
+                <label for="range-to" class="range-imitation-input-label">
+                  To:
+                </label>
+                <input id="range-to" type="text" class="range-imitation-input" value="800">
+              </div>
+              <div class="gallery-filters-button-container">
+                <button class="button button-light gallery-filters-button">
+                  show
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <span class="gallery-item-special">
+                sale
+              </span>
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item gallery-item-tablet">
+              <span class="gallery-item-special">
+                sale
+              </span>
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item gallery-item-tablet">
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item gallery-item-tablet">
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="section-heading gallery-heading">
+            Popular  products
+          </h2>
+          <div class="gallery-container gallery-container-additional">
+            <div class="gallery-item">
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item gallery-item-tablet">
+              <span class="gallery-item-special">
+                sale
+              </span>
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item gallery-item-tablet">
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+            <div class="gallery-item gallery-item-tablet">
+              <div class="gallery-item-image">
+                <img src="./images/product-image.png" width="222" height="221" alt="Premium beard balm image">
+              </div>
+              <div class="gallery-item-description">
+                <h2 class="gallery-item-title">
+                  Barbers
+                </h2>
+                <p>
+                  Premium beard balm
+                </p>
+                <p>
+                  50 ml
+                </p>
+                <p>
+                  New York original
+                </p>
+                <p class="gallery-item-price">
+                  $ 490.00
+                </p>
+              </div>
+              <div class="gallery-item-button-container">
+                <button class="button button-light">
+                  shop now
+                </button>
+                <button class="button-light gallery-item-button"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-slider-container">
+          <button class="gallery-slider-button gallery-slider-button-prev"></button>
+          <button class="gallery-slider-button gallery-slider-button-next"></button>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-section">
+      <div class="wrapper footer-container">
+        <a href="index.html" class="footer-logo">
+          <img class="footer-logo-pic" src="./images/Logo.png" alt="Barber Shop Company Logo">
+        </a>
+        <div class="footer-item-container">
+          <nav class="footer-nav footer-item">
+            <a href="index.html" class="footer-nav-item link">Home</a>
+            <a href="#" class="footer-nav-item link">Shop</a>
+            <a href="#" class="footer-nav-item link">Gallery</a>
+            <a href="#" class="footer-nav-item link">Contact us</a>
+          </nav>
+          <div class="footer-item">
+            <h2 class="footer-heading">
+              Visit us
+            </h2>
+            <p class="footer-text">
+              Ukraine, Kyiv 
+            </p>
+            <p class="footer-text">
+              str. Oleshi 15, 62000 
+            </p>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-heading">
+              Contact us
+            </h2>
+            <a href="mailto:support@gmail.com" class="footer-text">
+              support@gmail.com
+            </a>
+            <a href="tel:+38044152566954" class="footer-text">
+              +38 (044) 15 25 66 954
+            </a>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-heading">
+              Follow us
+            </h2>
+            <div class="footer-social-media-container">
+              <a href="#" class="footer-social-media footer-social-media-instagram"></a>
+              <a href="#" class="footer-social-media footer-social-media-youtube"></a>
+              <a href="#" class="footer-social-media footer-social-media-facebook"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("header-menu-show");
+        document.getElementById("myShadow").classList.toggle("header-menu-shadow-show");
+      }
+      
+      function myPopup() {
+        document.getElementById("myPopup").classList.toggle("popup-show");
+        document.getElementById("myShadow").classList.toggle("header-menu-shadow-show");
+      }
+      
+      function myLittlePopup() {
+        document.getElementById("myPopup").classList.toggle("popup-show");
+        document.getElementById("myDropdown").classList.toggle("header-menu-show");
+      }
+
+      function myFilters() {
+        document.getElementById("myFilters").classList.toggle("gallery-filters-container-show");
+        document.getElementById("myFiltersTitle").classList.toggle("gallery-filters-heading-hide");
+        document.getElementById("myShadow").classList.toggle("header-menu-shadow-show");
+      }
+    </script>
+  </body>
+</html>

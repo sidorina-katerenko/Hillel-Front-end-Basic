@@ -1,0 +1,147 @@
+.services {
+  &-section {
+    padding-top: 25px;
+  }
+
+  &-heading {
+    margin-bottom: 15px;
+  }
+
+  &-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    &-item {
+      color: $dark-beige-color;
+      padding-left: 70px;
+      position: relative;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 60px;
+        @include bg-standard-properties();
+        background-size: auto;
+      }
+
+      &-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      &-text {
+        font-weight: 500;
+        line-height: 20px;
+      }
+
+      &-scissors {
+        &::before {
+          background-image: url(../images/svg/service-scissors.svg);
+        }
+      }
+      
+      &-bottle {
+        &::before {
+          background-image: url(../images/svg/service-bottle.svg);
+        }
+      }
+      
+      &-shave {
+        &::before {
+          background-image: url(../images/svg/service-shave.svg);
+        }
+      }
+      
+      &-brush {
+        &::before {
+          background-image: url(../images/svg/service-brush.svg);
+        }
+      }
+      
+      &-fan {
+        &::before {
+          background-image: url(../images/svg/service-fan.svg);
+        }
+      }
+      
+      &-razor {
+        &::before {
+          background-image: url(../images/svg/service-razor-blade.svg);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    max-height: 500px;
+
+    &-section {
+      padding-top: 55px;
+    }
+
+    &-heading {
+      margin-bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    &-content {
+      padding-top: 35px;
+
+      &-item {
+        &:not(:nth-child(3n)) {
+          margin-bottom: 50px;
+        }
+
+        &-title {
+          text-transform: none;
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .services {
+    max-height: 400px;
+
+    &-section {
+      background-image: url(../images/our-services-bg.png);
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding-bottom: 160px;
+    }
+
+    &-content {
+      padding-top: 90px;
+      padding-bottom: 100px;
+
+      &-item {
+        &:not(:nth-child(2n)) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}

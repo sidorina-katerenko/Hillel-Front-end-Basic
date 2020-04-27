@@ -1,0 +1,232 @@
+@import "_normalize";
+
+@mixin bg-properties {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin bg-icon-properties {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #262f32;
+}
+
+.wrapper {
+  max-width: 1370px;
+  margin: 0 auto;
+}
+
+.walking-dog {
+  background-image: url(../images/dog-walking.png);
+  @include bg-properties();
+  min-height: 50vh;
+}
+
+.text-container {
+
+  &-left {
+    padding: 70px 90px 65px 60px;
+    background-image: url(../images/drawing-sketch.png);
+    @include bg-properties();
+    color: #fff;
+    font-weight: 100;
+  }
+
+  &-top {
+    padding: 55px 75px 100px 55px;
+  }
+
+  &-description {
+    font-size: 16px;
+    line-height: 28px;
+    opacity: 0.88;
+
+    &-top {
+      font-size: 18px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &-service {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &-right {
+    padding: 70px 160px 70px 60px;
+    min-height: 50%;
+  }
+}
+
+.burger {
+
+  &-button {
+    border: 0;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 75px;
+  }
+}
+
+.heading {
+  &-standard {
+    font-size: 40px;
+    line-height: 57.75px;
+    letter-spacing: 1.37px;
+    font-weight: 300;
+  }
+
+  &-top-row {
+    margin-bottom: 60px;
+  }
+
+  &-regular {
+    font-weight: 400;
+  }
+  
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-black {
+    font-weight: 900;
+  }
+}
+
+.best-starting {
+  background-image: url(../images/best-starting.png);
+  @include bg-properties();
+}
+
+.verified-dummy {
+  background-image: url(../images/verified-dummy.png);
+  @include bg-properties();
+  color: #fff;
+}
+
+.internal-link {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 17px;
+  line-height: 32px;
+  min-height: 50px;
+  min-width: 210px;
+  text-align: center;
+  padding: 10px;
+
+  &-history {
+    color: #262f32;
+    border: 1px solid #262f32;
+  }
+
+  &-dummy {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
+
+.designed-by {
+  color: #fff;
+  background-image: url(../images/designed-by.png);
+  @include bg-properties();
+  padding: 75px 65px 70px 50px;
+}
+
+.designer {
+
+  &-name {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 66px;
+    letter-spacing: 1.26px;
+  }
+
+  &-title {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.say-hello {
+  color: #fff;
+  background-image: url(../images/say-hello.png);
+  @include bg-properties();
+  padding: 75px 235px 70px 55px;
+  position: relative;
+  font-size: 17px;
+  line-height: 32px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #5a665f;
+    opacity: 0.5;
+  }
+}
+
+.input-elem {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &-message {
+    height: 160px;
+    resize: none;    
+  } 
+
+  &-container {
+    margin-bottom: 45px;
+  }
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  @include bg-icon-properties();
+  border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &-facebook {
+    background-image: url(../images/svg/Facebook.svg);
+    background-color: #345bb4;
+  }
+
+  &-dribbble {
+    background-image: url(../images/svg/Dribbble.svg);
+    background-color: #e64895;
+  }
+
+  &-twitter {
+    background-image: url(../images/svg/Twitter.svg);
+    background-color: #00b4ff;
+  }
+}

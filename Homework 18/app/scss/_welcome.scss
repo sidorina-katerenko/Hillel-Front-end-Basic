@@ -1,0 +1,83 @@
+.welcome {
+  &-section {
+    margin-top: $header-height-mob-desk;
+    height: 100vh - $header-height-mob-desk;
+    background-color: #000;
+    background-image: url(../images/welcome-background-mobile.png);
+    @include bg-standard-properties();
+    background-size: cover;
+  }
+
+  &-container {
+    padding-top: 30vh;
+  }
+
+  &-logo {
+    background-image: url(../images/welcome-logo-mobile.png);
+    @include bg-standard-properties();
+    background-size: contain;
+    width: 288px;
+    min-height: 93px;
+    margin-bottom: 25px;
+  }
+
+  &-text {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+.welcome {
+    &-section {
+      margin-top: $header-height-tablet;
+      height: auto;
+      background-image: url(../images/welcome-background-tablet.png);
+      padding: 135px 0 45px;
+    }
+
+    &-container {
+      padding-top: 30vh;
+    }
+
+    &-logo {
+      background-image: url(../images/welcome-logo-tablet.png);
+      width: 400px;
+      height: 130px;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      width: 400px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .welcome {
+    &-section {
+      margin-top: $header-height-mob-desk;
+      height: 100vh - $header-height-mob-desk;
+      margin-bottom: 90px;
+    }
+
+    &-container {
+      width: 50%;
+      padding-top: 20vh;
+    }
+
+    &-logo {
+      background-image: url(../images/welcome-logo-desktop.png);
+      width: 602px;
+      height: 194px;
+      margin-bottom: 65px;
+    }
+
+    &-text {
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+  }
+}

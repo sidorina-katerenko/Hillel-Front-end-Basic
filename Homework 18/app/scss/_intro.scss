@@ -1,0 +1,101 @@
+.intro {
+  &-section {
+    margin-top: $header-height-mob-desk;
+    background-image: url(../images/intro-bg-mobile.png);
+    @include bg-standard-properties();
+    background-size: cover;
+    padding: 140px 0 165px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(180deg, rgba(255, 122, 0, 0.6) 14.65%, rgba(255, 122, 0, 0) 114.84%);
+    }
+  }
+
+  &-container {
+    position: relative;
+  }
+
+  &-image {
+    display: block;
+    margin: 0 auto 10px;
+    width: 236px;
+  }
+
+  &-button {
+    position: absolute;
+    display: none;
+    border: none;
+    background-color: transparent;
+    width: 34px;
+    height: 34px;
+    @include bg-standard-properties();
+    background-size: contain;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro {
+    &-section {
+      margin-top: $header-height-tablet;
+      background-image: url(../images/intro-bg-tablet.png);
+      padding: 110px 0 175px;
+
+      &::before {
+        background-image: linear-gradient(90deg, rgba(255, 122, 0, 0.6) -25.94%, rgba(255, 122, 0, 0) 100%);
+      }
+    }
+
+    &-image {
+      width: 296px;
+    }
+
+    &-button {
+      display: block;
+      top: 50%;
+      margin-top: -17px;
+
+
+      &-prev {
+        background-image: url(../images/arrow-left.png);
+        left: 35px;
+      }
+  
+      &-next {
+        background-image: url(../images/arrow-right.png);
+        right: 35px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .intro {
+    &-section {
+      margin-top: $header-height-mob-desk;
+      background-image: url(../images/intro-bg-desktop.png);
+      padding: 140px 0;
+    }
+
+    &-image {
+      width: 500px;
+    }
+
+    &-button {
+      &-prev {
+        left: 0;
+      }
+  
+      &-next {
+        right: 0;
+      }
+    }
+  }
+}

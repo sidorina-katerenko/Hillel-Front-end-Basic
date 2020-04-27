@@ -1,0 +1,129 @@
+.footer {
+  &-section {
+    padding: 25px 0 65px;
+    background-color: $dark-color;
+    color: #fff;
+  }
+
+  &-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    &-pic {
+      width: 109px;
+      height: 35px;
+    }
+  }
+
+  &-nav {
+    &-item {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 8px;
+      margin-left: 10px;
+    }
+  }
+
+  &-item {
+    margin-bottom: 18px;
+  }
+
+  &-heading {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &-social-media {
+    display: block;
+    width: 20px;
+    height: 16px;
+    background-size: auto;
+    @include bg-standard-properties();
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    
+    &-container {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    &-instagram {
+      background-image: url(../images/instagram-white.png);
+    }
+
+    &-youtube {
+      background-image: url(../images/youtube-white.png);
+    }
+
+    &-facebook {
+      background-image: url(../images/facebook-white.png);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    &-section {
+      padding: 45px 0 25px;
+    }
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    &-logo {
+      margin-bottom: 0;
+  
+      &-pic {
+        width: 155px;
+        height: 50px;
+      }
+    }
+
+    &-item {
+      margin-bottom: 75px;
+      margin-left: 70px;
+
+      &:nth-child(2n) {
+        order: 1;
+      }
+
+      &-container {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    &-section {
+      padding-bottom: 170px;
+    }
+
+    &-nav {
+      margin-right: auto;
+    }
+
+    &-item {
+      margin-bottom: 0;
+      order: 0;
+    }
+  }
+}
